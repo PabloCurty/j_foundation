@@ -14,6 +14,7 @@ public class WS_inicia_servico extends Application {
  
 	public WS_inicia_servico() {
 		singletons.add(new StatusService());
+		singletons.add(new EntidadeServiceImpl());
 	}
  
 	public Set<Class<?>> getClasses() {
