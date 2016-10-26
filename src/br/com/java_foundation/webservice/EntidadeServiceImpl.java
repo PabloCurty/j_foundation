@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 import br.com.java_foundation.controle.EntidadeControle;
 
 @Path("/entidadeservice")
-public class EntidadeServiceImpl implements EntidadeService{
+public class EntidadeServiceImpl implements EntidadeService_interface{
 
 	//@Inject
 	EntidadeControle entidadeControle = new EntidadeControle();
@@ -24,11 +24,11 @@ public class EntidadeServiceImpl implements EntidadeService{
 	}
 
 	@GET
-	@Path("getentidade/{id}")
+	@Path("getentidade/{id}/{nomeEntidade}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Override
-	public Object getEntidade(@PathParam("id") Long id) {
-		return "o id eh : " + entidadeControle.getEntidade(id);
+	public Object getEntidade(@PathParam("id") String id, @PathParam("nomeEntidade") String nomeEntidade) {
+		return entidadeControle.getEntidade(id, nomeEntidade);
 	}
 
 }
