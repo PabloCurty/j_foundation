@@ -34,7 +34,7 @@ public class Pessoa extends EntidadeAbastrata_impl{
 		this.userName = userName;
 		this.senha = senha;
 	}
-
+	
 	public Pessoa(String id) {
 		super(id);
 	}

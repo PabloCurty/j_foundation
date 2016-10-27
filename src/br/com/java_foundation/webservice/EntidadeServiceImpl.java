@@ -24,10 +24,10 @@ public class EntidadeServiceImpl implements EntidadeService_interface{
 	}
 
 	@GET
-	@Path("getentidade/{id}/{nomeEntidade}")
+	@Path("get/{nomeEntidade}/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Override
-	public Object getEntidade(@PathParam("id") String id, @PathParam("nomeEntidade") String nomeEntidade) {
+	public Object getEntidade(@PathParam("nomeEntidade") String nomeEntidade, @PathParam("id") String id ) {
 		return entidadeControle.getEntidade(id, nomeEntidade);
 	}
 

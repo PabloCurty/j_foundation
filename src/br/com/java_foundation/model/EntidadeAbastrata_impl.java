@@ -73,3 +73,4 @@ public abstract class EntidadeAbastrata_impl implements EntidadeAbstrata_interfa
 	}
 	
 }
+
