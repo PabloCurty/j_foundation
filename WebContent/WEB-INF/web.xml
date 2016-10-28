@@ -10,22 +10,18 @@
   </servlet-mapping>
   <context-param>
     <param-name>javax.ws.rs.Application</param-name>
-    <param-value>br.com.java_foundation.webservice.WS_inicia_servico</param-value>
+    <param-value>br.com.java_foundation.webservice.WS_inicia_servicos</param-value>
   </context-param>
   <context-param>
     <param-name>resteasy.servlet.mapping.prefix</param-name>
     <param-value>/rs</param-value>
   </context-param>
   <listener>
-    <listener-class>
-				org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
-			</listener-class>
+    <listener-class>org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class>
   </listener>
   <servlet>
     <servlet-name>resteasy-servlet</servlet-name>
-    <servlet-class>
-				org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
-			</servlet-class>
+    <servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
   </servlet>
   <context-param>
     <param-name>resteasy.scan</param-name>
